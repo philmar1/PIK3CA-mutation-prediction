@@ -33,7 +33,7 @@ The kedro project contains three pipelines located in src/pipelines
 - data_engineering: Data engineer data to create train and eval data. Also scale and shuffle data. Run `kedro run --pipeline=data_engineering`
 - training: Train models using declared train and eval dataloaders. Run `kedro run --pipeline=training`
 
-The pipelines can be visualized using kedro viz. Here is the visualization of the functions and datasets used in the DualStream training process, from processing to training. 
+The pipelines can be visualized using kedro viz. Here is the visualization of the functions and datasets used in training the AttentionBasedNet model, from processing to training. 
 ![Alt text](images/kedro-pipeline_png.png)
 
 All config parameters are found in conf/base/parameters and data location in conf/base/catalog.yml
