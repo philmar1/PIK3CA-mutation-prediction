@@ -1,0 +1,61 @@
+# This is a boilerplate parameters config generated for pipeline 'classification_pipeline'
+# using Kedro 0.18.4.
+#
+# Documentation for this file format can be found in "Parameters"
+# Link: https://kedro.readthedocs.io/en/0.18.4/kedro_project_setup/configuration.html#parameters
+
+process:
+  scaler:
+
+attention_based_model:
+  att_block: 'gated'
+  input_dim: 2048
+  agg_embed_dim: 1024
+  cl_hidden_layers_size: [512]
+  transformers_first: True
+
+instance_classifier:
+  input_dim: 2048
+  cl_hidden_layers_size: [512]
+  dropout: 0.1
+  end_activation: False
+
+dual_stream_model:
+  input_dim: 2048
+  embed_dim: 1024
+  dropout: 0.
+  passing_v: True
+  transformers_first: False
+  instance_classifier: 
+
+lr_scheduler:
+  warmup: 100
+  max_iters: 2000 
+
+instance_classifier_train:
+  train_batch_size: 128
+  eval_batch_size: 32
+  hyperparameters: {
+      'epochs': 5,
+      'warmup_epoch': 3,
+      'gamma': 0.9,
+      'start_lr': 0.00000001,
+      'end_lr': 0.001,
+      'positive_weight': 8
+      }
+
+train:
+  n_instances: 500
+  train_batch_size: 16
+  eval_batch_size: 32
+  hyperparameters: {
+      'epochs': 30,
+      'warmup_epoch': 3,
+      'gamma': 0.9,
+      'start_lr': 0.00000001,
+      'end_lr': 0.0001,
+      'positive_weight': 2
+      }
+
+eval:
+  n_instances: 1000
