@@ -28,7 +28,7 @@ def concatenate_pipeline(**kwargs) -> Pipeline:
             inputs=['params:concatenate_datasets_pipeline_test.parameters'],
             outputs=['concatenated_datasets_test', 'concatenated_targets_test', 'concatenated_indexs_test'],
             name='concatenate_datasets_test',
-            tags='data_processing'
+            tags='data_processing_test'
         )
     ])
 

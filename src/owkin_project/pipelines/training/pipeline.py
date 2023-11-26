@@ -81,7 +81,7 @@ def training_DualStream_pipeline(**kwargs) -> Pipeline:
                      
                      node(
         func=get_MILDataset,
-        inputs=['X_eval',
+        inputs=['X_eval_scaled',
                 'y_eval',
                 'params:eval.n_instances'],
         outputs='eval_dataset',
