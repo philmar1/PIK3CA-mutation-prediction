@@ -6,7 +6,8 @@ This repository aims to present the way I program, what libraries and frameworks
 However, when I don't use it, I always try to respect the good coding practices it includes (data management, logging, configs, pipelines ...)
 
 
-Note: all the code I produced is stored within 3 pipelines folders (data_engineering, data_processing, training) that can be found in src/owking_project/pipelines
+**Note: all the code I produced is stored within 3 pipelines folders (data_engineering, data_processing, training) that can be found in src/owking_project/pipelines**
+
 ## The PIK3CA challenge
 
 This is a challenge that focused on Multiple Instance Learning prediction to detect PIK3CA mutation in breast cancer. The project was created by Owkin and ENS-ParisSaclay. More details can be found here: https://challengedata.ens.fr/challenges/98. 
