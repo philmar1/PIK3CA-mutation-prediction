@@ -23,7 +23,7 @@ Dual Stream MIL network is composed of two parts:
 
 ![Alt text](images/DualStreamNet.png)
 
-For educational purpose, I first started by created a simple aggregator based on self attention module. This aggregator can use simple attention block or gated attention block. The model is simply called AttentionBasedNet and can be found in src/owking_project/pipeines/training/models/AttentionBased.py. Here is a piece of code for the model:
+For educational purpose, I first started by creating a simple aggregator based on self attention modules. This aggregator can use simple attention blocks or gated attention blocks. The model is called AttentionBasedNet and can be found in src/owking_project/pipeines/training/models/AttentionBased.py. Here is a piece of code of the model:
 
 ![Alt text](images/code_piece.png)
 
