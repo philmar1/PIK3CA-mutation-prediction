@@ -5,6 +5,8 @@
 This repository aims to present the way I program, what libraries and frameworks do I use, how I declare my variables, classes, functions, what details of comments do I add, how I use git ... .Note that this code was created using kedro framework (see [Kedro documentation](https://kedro.readthedocs.io)) which allows an automation of pipelines execution, reproducability as well as uniformity in projects organization (folders, parameters registration, code implementation ...). It is a framework that I use on a daily basis. 
 However, when I don't use it, I always try to respect the good coding practices it includes (data management, logging, configs, pipelines ...)
 
+
+Note: all the code I produced is stored within 3 pipelines folders (data_engineering, data_processing, training) that can be found in src/owking_project/pipelines
 ## The PIK3CA challenge
 
 This is a challenge that focused on Multiple Instance Learning prediction to detect PIK3CA mutation in breast cancer. The project was created by Owkin and ENS-ParisSaclay. More details can be found here: https://challengedata.ens.fr/challenges/98. 
@@ -20,6 +22,11 @@ Dual Stream MIL network is composed of two parts:
 - An aggregator, which embeds a bag of instance. This part uses self attention network to identify what instances contribute the most to the embedding (and therefore, to output class)
 
 ![Alt text](images/DualStreamNet.png)
+
+For educational purpose, I first started by created a simple aggregator based on self attention module. This aggregator can use simple attention block or gated attention block. The model is simply called AttentionBasedNet and can be found in src/owking_project/pipeines/training/models/AttentionBased.py. Here is a piece of code for the model:
+
+![Alt text](images/code_piece.png)
+
 
 The kedro project contains three pipelines located in src/pipelines
 - data_processing: Preprocess data by concatenating data from all patients folders. Run `kedro run --pipeline=data_processing`
